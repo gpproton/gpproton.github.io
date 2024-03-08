@@ -14,11 +14,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-          cache: 'yarn'
+          cache: 'pnpm'
 
       - run: |
-          yarn install
-          yarn generate
+          pnpm install
+          pnpm generate
       - name: Init new repo in $BUILD_FOLDER and commit generated files
         run: |
           grep -rnwl "<link rel=\"prefetch\"" $BUILD_FOLDER | xargs sed -i 's$<link rel="prefetch" href="[^"]*\.\(jpg\|png\|webm\|jpeg\|ttg\|svg\|gif\)">$$g'
