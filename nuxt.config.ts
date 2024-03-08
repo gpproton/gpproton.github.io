@@ -37,8 +37,5 @@ export default defineNuxtConfig({
     'primevue/resources/themes/lara-light-teal/theme.css',
     'primeicons/primeicons.css',
   ],
-  build: {
-    transpile: ['nuxt', 'primevue']
-  },
 });
 
