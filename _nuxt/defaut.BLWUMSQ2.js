@@ -1,0 +1,1 @@
+import{_ as r,c as n,a,X as t,o,d as s}from"./entry.DhSr-ZNL.js";const l={};function c(e,d){return o(),n("div",null,[a("header",null,[t(e.$slots,"header",{},()=>[s(" Default header content ")])]),a("main",null,[t(e.$slots,"default")])])}const u=r(l,[["render",c]]);export{u as default};
