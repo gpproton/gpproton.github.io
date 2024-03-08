@@ -2,6 +2,8 @@ name: Deploy to GitHub pages
 on:
   push:
     branches: [main]
+permissions:
+  contents: write
 env:
   BUILD_FOLDER: .output/public
 jobs:
@@ -9,11 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Generate static Nuxt 3 files
-        uses: actions/setup-node@v3
+        uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
         with:
-          node-version: "18"
+          version: 8.15.4
+      - name: Generate static Nuxt 3 files
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
           cache: 'pnpm'
 
       - run: |
