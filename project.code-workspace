@@ -1,22 +1,21 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {
-		"window.zoomLevel": -1,
-		"files.autoSave": "afterDelay",
-		"editor.bracketPairColorization.enabled": true,
-		"editor.guides.bracketPairs": true,
-		"editor.formatOnSave": true,
-	},
-	"extensions": {
-		"recommendations": [
-			"vue.vscode-typescript-vue-plugin",
-			"nuxtr.nuxtr-vscode",
-			"nuxtr.nuxt-vscode-extentions",
-			"github.vscode-github-actions"
-		]
-	}
+  "folders": [
+    {
+      "path": ".",
+    },
+  ],
+  "settings": {
+    "window.zoomLevel": -1,
+    "files.autoSave": "afterDelay",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "editor.formatOnSave": true,
+  },
+  "extensions": {
+    "recommendations": [
+      "nuxtr.nuxtr-vscode",
+      "nuxtr.nuxt-vscode-extentions",
+      "github.vscode-github-actions",
+    ],
+  },
 }
