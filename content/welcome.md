@@ -1,12 +1,11 @@
 ---
-title: 'Sample Content'
-description: 'Markdown Sample Page'
+title: 'Welcome Content'
+description: 'Markdown welcome'
 author: 'Godwin peter .O'
 ---
 
-Hello World **Nuxt Content V2**
+Hello **V1**
 
 ### Navigation
 
-[Component Sample](/blog/welcome)
-
+[Component Index](/blog)
