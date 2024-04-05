@@ -1,4 +1,5 @@
 <template>
+  <NuxtPwaAssets />
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
