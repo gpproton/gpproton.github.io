@@ -1,5 +1,5 @@
 const loadLocaleMessages = () => {
-  const locales = import.meta.glob('../locales/*.json', { eager: true });
+  const locales = import.meta.glob('./locales/*.json', { eager: true });
   const messages: Record<string, any> = {};
   Object.keys(locales).forEach((key) => {
     const matched = key.match(/([A-Za-z0-9-_]+)\./i);
@@ -30,6 +30,6 @@ export type CountryOption = {
 };
 
 export const languages: CountryOption[] = [
-  { countryCode: 'US', name: 'English', value: 'en-US' },
+  { countryCode: 'US', name: 'English', value: 'en' },
   { countryCode: 'FR', name: 'Français', value: 'fr' },
 ];

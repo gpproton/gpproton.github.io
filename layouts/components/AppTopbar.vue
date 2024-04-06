@@ -4,10 +4,11 @@ import { Dialog, DialogPanel } from '@headlessui/vue';
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'shared.about', href: '#' },
+  { name: 'shared.resume', href: '#' },
+  { name: 'shared.skills', href: '#' },
+  { name: 'shared.projects', href: '#' },
+  { name: 'shared.blog', href: '/blog' },
 ];
 
 const mobileMenuOpen = ref(false);
@@ -20,13 +21,9 @@ const mobileMenuOpen = ref(false);
       aria-label="Global"
     >
       <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
+        <a href="/" class="-m-1.5 p-1.5">
           <span class="sr-only">Godwin peter .O</span>
-          <img
-            class="h-8 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt=""
-          />
+          <img class="h-12 w-auto rounded-full" src="/pwa-64x64.png" alt="" />
         </a>
       </div>
       <!-- Only mobile -->
@@ -47,7 +44,7 @@ const mobileMenuOpen = ref(false);
           :key="item.name"
           :href="item.href"
           class="text-sm font-semibold leading-6 text-gray-900"
-          >{{ item.name }}</a
+          >{{ $t(item.name) }}</a
         >
       </div>
       <!--
@@ -95,7 +92,7 @@ const mobileMenuOpen = ref(false);
                 :key="item.name"
                 :href="item.href"
                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >{{ item.name }}</a
+                >{{ $t(item.name) }}</a
               >
             </div>
             <!--

@@ -1,5 +1,12 @@
 {
   "router": {
     "home": "home"
+  },
+  "shared": {
+    "about": "About",
+    "resume": "Resume",
+    "skills": "Skills",
+    "projects": "Projects",
+    "blog": "Blog"
   }
 }

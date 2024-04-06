@@ -1,12 +1,9 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import AppLayout from './AppLayout.vue';
+</script>
 
 <template>
-  <div>
-    <header>
-      <slot name="header"> Default header content </slot>
-    </header>
-    <main>
-      <router-view></router-view>
-    </main>
-  </div>
+  <app-layout>
+    <router-view></router-view>
+  </app-layout>
 </template>

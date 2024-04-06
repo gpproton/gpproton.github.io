@@ -5,8 +5,10 @@ import AppTopbar from './components/AppTopbar.vue';
 <template>
   <div class="bg-white">
     <app-topbar></app-topbar>
-    <div class="relative isolate px-6 pt-14 lg:px-8">
-      <router-view></router-view>
+    <div class="relative isolate px-6 pt-14 mt-8 lg:px-8">
+      <slot>
+        <router-view></router-view>
+      </slot>
     </div>
   </div>
 </template>

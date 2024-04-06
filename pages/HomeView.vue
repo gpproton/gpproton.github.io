@@ -2,6 +2,6 @@
 
 <template>
   <div class="card flex justify-content-center">
-    <Button label="Validate" />
+    <Button label="Placeholder" />
   </div>
 </template>
