@@ -1,0 +1,1 @@
+import t from"./D9fjoOew.js";import{_ as o,c,b as r,o as n}from"./BivQ4lp2.js";import"./BVNGTG8Q.js";import"./4uy2ObqJ.js";import"./BL8KFq9Z.js";import"./DopTDxMl.js";const s={},a={class:"card flex justify-content-center"};function i(_,m){const e=t;return n(),c("div",a,[r(e,{label:"Placeholder"})])}const h=o(s,[["render",i]]);export{h as default};

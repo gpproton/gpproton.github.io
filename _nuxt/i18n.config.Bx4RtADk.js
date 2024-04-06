@@ -1,1 +1,0 @@
-const o=()=>{const e=Object.assign({}),a={};return Object.keys(e).forEach(n=>{const s=n.match(/([A-Za-z0-9-_]+)\./i);if(s&&s.length>1){const c=s[1];a[c]=e[n]}}),a},t=()=>({legacy:!1,globalInjection:!0,locale:"en-US",messages:o()}),l=[{countryCode:"US",name:"English",value:"en-US"},{countryCode:"FR",name:"Français",value:"fr"}];export{t as default,l as languages};
