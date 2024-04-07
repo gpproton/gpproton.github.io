@@ -40,6 +40,7 @@
     "typescript": "^5.4.4"
   },
   "dependencies": {
+    "nuxt-content-git": "^4.0.0",
     "primevue": "^3.49.1",
     "vue": "^3.4.19",
     "vue-router": "^4.3.0"
