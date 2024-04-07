@@ -1,1 +1,0 @@
-import{_ as o}from"./CwgE4oMT.js";import{f as t,O as r,o as a,R as n,w as s,b as _}from"./BPLFMLwN.js";import"./BuAMUvGG.js";const l=t({__name:"BlogLayout",setup(c){return(m,p)=>{const e=r("router-view");return a(),n(o,null,{default:s(()=>[_(e)]),_:1})}}});export{l as default};

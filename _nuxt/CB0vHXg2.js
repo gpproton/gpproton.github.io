@@ -1,0 +1,1 @@
+import{_ as r,o,c as t,n as a}from"./DuLTLirq.js";const n={},s={class:"p-2 border bg-white dark:bg-black dark:border-gray-700 rounded"};function c(e,d){return o(),t("div",s,[a(e.$slots,"default")])}const l=r(n,[["render",c]]);export{l as default};
