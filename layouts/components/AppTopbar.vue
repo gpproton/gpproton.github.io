@@ -4,12 +4,30 @@ import { Dialog, DialogPanel } from '@headlessui/vue';
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
 
 const navigation = [
-  { name: 'shared.about', href: '#' },
-  { name: 'shared.resume', href: '#' },
-  { name: 'shared.skills', href: '#' },
-  { name: 'shared.projects', href: '#' },
+  { name: 'shared.about', href: '/' },
+  { name: 'shared.resume', href: '#resume' },
+  { name: 'shared.skills', href: '#skills' },
+  { name: 'shared.projects', href: '#projects' },
   { name: 'shared.blog', href: '/blog' },
 ];
+
+const socialLinks = ref([
+  {
+    name: 'Github',
+    icon: 'pi-github',
+    href: 'https://github.com/gpproton',
+  },
+  {
+    name: 'Twitter',
+    icon: 'pi-twitter',
+    href: 'https://twitter.com/gpproton',
+  },
+  {
+    name: 'Linkedin',
+    icon: 'pi-linkedin',
+    href: 'https://www.linkedin.com/in/gpproton',
+  },
+]);
 
 const mobileMenuOpen = ref(false);
 </script>
@@ -21,10 +39,10 @@ const mobileMenuOpen = ref(false);
       aria-label="Global"
     >
       <div class="flex lg:flex-1">
-        <a href="/" class="-m-1.5 p-1.5">
+        <nuxt-link to="/" class="-m-1.5 p-1.5">
           <span class="sr-only">Godwin peter .O</span>
-          <img class="h-12 w-auto rounded-full" src="/pwa-64x64.png" alt="" />
-        </a>
+          <img class="h-12 w-auto rounded-xl" src="/pwa-64x64.png" alt="logo" />
+        </nuxt-link>
       </div>
       <!-- Only mobile -->
       <div class="flex lg:hidden">
@@ -39,21 +57,37 @@ const mobileMenuOpen = ref(false);
       </div>
       <!-- Only large -->
       <div class="hidden lg:flex lg:gap-x-12">
-        <a
+        <nuxt-link
           v-for="item in navigation"
           :key="item.name"
-          :href="item.href"
-          class="text-sm font-semibold leading-6 text-gray-900"
-          >{{ $t(item.name) }}</a
-        >
+          :to="item.href"
+          class="text-sm font-semibold leading-6 text-gray-600 hover:text-blue-500 active:text-blue-400"
+          >{{ $t(item.name) }}
+        </nuxt-link>
       </div>
-      <!--
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-          >Log in <span aria-hidden="true">&rarr;</span></a
-        >
+
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <!-- <Button raised type="button" class="px-4 py-2" label="Hire Me" /> -->
+        <div class="inline-flex justify-between lg:block">
+          <ul
+            class="flex gap-6 lg:gap-4 justify-center text-white mr-5 items-center"
+          >
+            <li
+              v-for="link in socialLinks"
+              :key="link.name"
+              class="text-gray-500"
+            >
+              <a
+                :href="link.href"
+                aria-label="twitter"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                ><i :class="'pi ' + link.icon" style="font-size: 1.55rem"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      -->
     </nav>
     <!-- Mobile navigation -->
     <Dialog
@@ -69,11 +103,7 @@ const mobileMenuOpen = ref(false);
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Godwin peter .O</span>
-            <img
-              class="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt=""
-            />
+            <img class="h-8 w-auto" src="/pwa-64x64.png" alt="" />
           </a>
           <button
             type="button"
@@ -87,13 +117,13 @@ const mobileMenuOpen = ref(false);
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
-              <a
+              <nuxt-link
                 v-for="item in navigation"
                 :key="item.name"
                 :href="item.href"
-                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >{{ $t(item.name) }}</a
-              >
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 active:text-blue-400"
+                >{{ $t(item.name) }}
+              </nuxt-link>
             </div>
             <!--
               <div class="py-6">
