@@ -1,0 +1,1 @@
+import{_ as r,o,c as t,s}from"./DTw-eYQA.js";const a={},c={class:"p-2 border bg-white dark:bg-black dark:border-gray-700 rounded"};function n(e,d){return o(),t("div",c,[s(e.$slots,"default")])}const l=r(a,[["render",n]]);export{l as default};
