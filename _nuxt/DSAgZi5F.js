@@ -1,1 +1,0 @@
-import{_ as s}from"./DjJGQNE0.js";import{f as a,W as n,o as r,c,b as e,a as _,n as i}from"./DuLTLirq.js";const p={class:"bg-white container"},l={class:"relative isolate px-6 pt-14 mt-8 lg:px-8"},v=a({__name:"AppLayout",setup(m){return(o,d)=>{const t=n("router-view");return r(),c("div",p,[e(s),_("div",l,[i(o.$slots,"default",{},()=>[e(t)])])])}}});export{v as _};
