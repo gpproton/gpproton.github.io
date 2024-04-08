@@ -28,8 +28,6 @@ const processTags = (value?: string): string[] => {
 
   return items.length > 7 ? items.slice(0, items.length - 1) : items;
 };
-
-console.log(page.value);
 </script>
 
 <template>
