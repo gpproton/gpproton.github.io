@@ -21,9 +21,6 @@ head:
       content: 'blog, vue, content, tests'
 ---
 
-<br />
-<br />
-
 **Inline component**
 
 :content-banner

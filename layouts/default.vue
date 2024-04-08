@@ -3,9 +3,9 @@ import AppTopbar from './components/AppTopbar.vue';
 </script>
 
 <template>
-  <div class="bg-white container">
+  <div class="bg-white">
     <app-topbar></app-topbar>
-    <div class="relative isolate px-6 pt-14 mt-8 lg:px-8">
+    <div class="pt-14 mt-8 lg:px-8 px-4">
       <slot>
         <router-view></router-view>
       </slot>

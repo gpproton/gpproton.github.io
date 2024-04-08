@@ -1,4 +1,7 @@
+import tailwindTypography from '@tailwindcss/typography';
+
 export default {
-  dark: false,
-  content: ['presets/**/*.{js,vue,ts}'],
+  darkMode: ['selector', '[data-mode="dark"]'],
+  content: ['presets/**/*.{js,vue,ts}', 'articles/**/*.md'],
+  plugins: [tailwindTypography],
 };

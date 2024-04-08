@@ -30,7 +30,7 @@ useSeoMeta({
 <template>
   <div class="mt-8">
     <div class="text-center">
-      <div class="text-5xl text-blue-500 font-bold mb-3">
+      <div class="lg:text-5xl text-3xl text-blue-500 font-bold mb-3">
         {{ pageHeading }}
       </div>
       <p class="font-sans text-base font-light xl:w-2/4 lg:w-3/4 mx-auto">

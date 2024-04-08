@@ -48,7 +48,7 @@ useSeoMeta({
       <div class="md:w-3/4 sm:w-full text-left mb-2">
         <p class="text-2xl font-light px-1">Fullstack Developer</p>
         <h2
-          class="lg:text-7xl text-5xl lg:text-nowrap lg:text-ellipsis text-gray-600 font-extrabold mb-2"
+          class="lg:text-7xl md:text-5xl text-4xl lg:text-nowrap lg:text-ellipsis text-gray-600 font-extrabold mb-2"
         >
           {{ 'Godwin Peter .O' }}
         </h2>

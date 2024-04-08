@@ -75,7 +75,7 @@ const mobileMenuOpen = ref(false);
             <li
               v-for="link in socialLinks"
               :key="link.name"
-              class="text-gray-500"
+              class="text-gray-500 hover:text-blue-400"
             >
               <a
                 :href="link.href"
@@ -122,6 +122,7 @@ const mobileMenuOpen = ref(false);
                 :key="item.name"
                 :href="item.href"
                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 active:text-blue-400"
+                @click="mobileMenuOpen = false"
                 >{{ $t(item.name) }}
               </nuxt-link>
             </div>

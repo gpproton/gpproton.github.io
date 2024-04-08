@@ -46,6 +46,9 @@ export default defineNuxtConfig({
           include: '*',
           exclude: ['Editor', 'Chart'],
         },
+        options: {
+          ripple: true,
+        },
       },
     ],
     [
@@ -66,7 +69,17 @@ export default defineNuxtConfig({
       {
         highlight: {
           theme: 'one-dark-pro',
-          preload: ['css', 'scss', 'json', 'js', 'ts', 'html', 'bash', 'vue'],
+          preload: [
+            'css',
+            'scss',
+            'json',
+            'js',
+            'ts',
+            'html',
+            'bash',
+            'vue',
+            'yaml',
+          ],
         },
       },
     ],
