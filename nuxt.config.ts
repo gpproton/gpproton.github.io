@@ -10,6 +10,11 @@ export default defineNuxtConfig({
     global: true,
     dirs: ['~/components'],
   },
+  nitro: {
+    prerender: {
+      routes: ['/api/search.json'],
+    },
+  },
   runtimeConfig: {
     public: {
       APP_VERSION: pkg.version,
@@ -91,12 +96,13 @@ export default defineNuxtConfig({
     navigation: {
       fields: ['author', 'publishedAt'],
     },
-    sources: {
-      content: {
-        driver: 'fs',
-        prefix: '/blog',
-        base: path.resolve(__dirname, 'articles'),
-      },
-    },
+    // TODO: Review if necessary
+    // sources: {
+    //   content: {
+    //     driver: 'fs',
+    //     prefix: '/blog',
+    //     base: path.resolve(__dirname, 'articles'),
+    //   },
+    // },
   },
 });

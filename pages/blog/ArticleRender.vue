@@ -1,35 +1,36 @@
 <script setup lang="ts">
+import { formatDate } from '~/composables/date';
+
 const route = useRoute();
 const routeSlug: string = route.params.slug.toString();
 
-const { data: page } = await useAsyncData(
-  '/',
-  queryContent('').where({ slug: { $eq: routeSlug } }).findOne,
+const { data: page } = await useAsyncData('/', () =>
+  queryContent('')
+    .where({ slug: { $eq: routeSlug } })
+    .findOne(),
 );
 const pagePath = computed<string>(() => page.value?._path ?? '');
-
-const formatDate = (date: string) => {
-  return new Date(date).toLocaleDateString('en', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
-};
 </script>
 
 <template>
   <div class="markdown">
     <ContentDoc :path="pagePath">
       <template #default="{ doc }">
-        <h1>Title: {{ doc.title }}</h1>
-        <p>Description: {{ doc.description }}</p>
-        <p>Author: {{ doc.author }}</p>
-        <div class="details-cont">
-          <span>Posted: {{ formatDate(doc.createdAt) }}</span>
-          <span>Updated: {{ formatDate(doc.updatedAt) }}</span>
+        <div class="space-y-8">
+          <div class="text-center p-8 border-b">
+            <h1 class="text-5xl font-bold mb-4">{{ doc.title }}</h1>
+            <p class="text-lg font-light">{{ doc.description }}</p>
+            <div class="mt-4">
+              <span
+                class="text-sm uppercase font-normal rounded-lg bg-blue-100 px-3 py-1.5"
+              >
+                {{ formatDate(doc.createdAt) }}
+              </span>
+            </div>
+            <!-- <span>Updated: {{ formatDate(doc.updatedAt) }}</span> -->
+          </div>
+          <ContentRenderer :value="doc" />
         </div>
-        <hr />
-        <ContentRenderer :value="doc" />
       </template>
       <!-- Slot if document is not found -->
       <template #not-found>
@@ -37,7 +38,9 @@ const formatDate = (date: string) => {
       </template>
       <!-- Slot if no page content -->
       <template #empty>
-        <h1>Document is empty</h1>
+        <div class="text-center">
+          <h1>Document is empty</h1>
+        </div>
       </template>
     </ContentDoc>
   </div>

@@ -1,5 +1,5 @@
 ---
-title: 'Welcome Content'
+title: 'Welcome Content Testing'
 description:
   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore
   sed consequuntur error repudiandae numquam deserunt quisquam
@@ -10,8 +10,8 @@ draft: false
 navigation: true
 ---
 
-Hello **V1**
+Summary of welcome content.
 
-### Navigation
+# Navigation
 
 [Component Index](/blog)
