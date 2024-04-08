@@ -10,6 +10,17 @@ const { data: page } = await useAsyncData(() =>
     .findOne(),
 );
 const pagePath = computed<string>(() => page.value?._path ?? '');
+
+if (page.value !== null) {
+  useSeoMeta({
+    title: page.value.title + ' :: Godwin Peter .O',
+    ogTitle: page.value.title,
+    description: page.value.description,
+    ogDescription: page.value.description,
+    ogImage: page.value.image,
+    twitterCard: 'summary_large_image',
+  });
+}
 </script>
 
 <template>

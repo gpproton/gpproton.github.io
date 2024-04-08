@@ -12,13 +12,26 @@ const { data: articles } = await useAsyncData(() =>
     .sort({ date: -1 })
     .find(),
 );
+
+const pageHeading = ref("Peter's Random Musings");
+const pageTitle = ref('Blog :: Godwin Peter .O');
+const pageDescription = ref('List of articles in the blog');
+
+useSeoMeta({
+  title: pageTitle.value,
+  description: pageDescription.value,
+  ogTitle: pageHeading.value,
+  ogDescription: pageDescription.value,
+  ogImage: 'https://godwin.dev//images/placeholder.webp',
+  twitterCard: 'summary_large_image',
+});
 </script>
 
 <template>
   <div class="mt-8">
     <div class="text-center">
       <div class="text-5xl text-blue-500 font-bold mb-3">
-        {{ "Peter's Random Musings" }}
+        {{ pageHeading }}
       </div>
       <p class="font-sans text-base font-light xl:w-2/4 lg:w-3/4 mx-auto">
         {{ "Here's a list of all my blog posts" }}

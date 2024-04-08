@@ -1,4 +1,16 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const pageHeading = ref('Godwin Peter .O personal website');
+const pageTitle = ref('Home :: Godwin Peter .O');
+const pageDescription = ref('Profile home page for Godwin Peter .O');
+
+useSeoMeta({
+  title: pageTitle.value,
+  description: pageDescription.value,
+  ogTitle: pageHeading.value,
+  ogDescription: pageDescription.value,
+  twitterCard: 'summary_large_image',
+});
+</script>
 
 <template>
   <div>

@@ -16,16 +16,10 @@ export default defineNuxtConfig({
       APP_MODE: process.env?.NODE_ENV,
     },
   },
-  hooks: {
-    'pages:routerOptions'({ files }) {
-      files.push({
-        path: path.resolve('./router.options'),
-        optional: true,
-      });
-    },
-  },
   app: {
     head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
       link: [],
     },
   },
