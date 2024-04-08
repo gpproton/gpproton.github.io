@@ -39,6 +39,7 @@
     "prettier": "^3.2.5",
     "primeicons": "^6.0.1",
     "sass": "^1.69.5",
+    "sitemap": "^7.1.1",
     "typescript": "^5.4.4"
   },
   "dependencies": {

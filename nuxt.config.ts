@@ -5,15 +5,9 @@ import path from 'path';
 // https://alejandrosuarez.eu/blog/how-to-deploy-nuxt3-app-in-github-pages/
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  ssr: false,
   components: {
     global: true,
     dirs: ['~/components'],
-  },
-  nitro: {
-    prerender: {
-      routes: ['/api/search.json'],
-    },
   },
   runtimeConfig: {
     public: {
@@ -97,12 +91,21 @@ export default defineNuxtConfig({
       fields: ['author', 'publishedAt'],
     },
     // TODO: Review if necessary
-    // sources: {
-    //   content: {
-    //     driver: 'fs',
-    //     prefix: '/blog',
-    //     base: path.resolve(__dirname, 'articles'),
-    //   },
-    // },
+    sources: {
+      content: {
+        driver: 'fs',
+        prefix: '/blog',
+        base: path.resolve(__dirname, 'articles'),
+      },
+    },
   },
+
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/sitemap.xml', '/api/search.json'],
+    },
+    minify: true,
+  },
+  ssr: true,
 });

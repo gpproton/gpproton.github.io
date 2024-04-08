@@ -2,11 +2,11 @@
 import { formatDate } from '~/composables/date';
 
 const route = useRoute();
-const routeSlug: string = route.params.slug.toString();
+const routeSlug = computed(() => route.params.slug.toString());
 
-const { data: page } = await useAsyncData('/', () =>
-  queryContent('')
-    .where({ slug: { $eq: routeSlug } })
+const { data: page } = await useAsyncData(() =>
+  queryContent('/blog/')
+    .where({ slug: { $eq: routeSlug.value } })
     .findOne(),
 );
 const pagePath = computed<string>(() => page.value?._path ?? '');
@@ -14,12 +14,14 @@ const pagePath = computed<string>(() => page.value?._path ?? '');
 
 <template>
   <div class="markdown">
-    <ContentDoc :path="pagePath">
+    <ContentDoc v-if="route.params.slug" :path="pagePath">
       <template #default="{ doc }">
         <div class="space-y-8">
           <div class="text-center p-8 border-b">
             <h1 class="text-5xl font-bold mb-4">{{ doc.title }}</h1>
-            <p class="text-lg font-light">{{ doc.description }}</p>
+            <p class="text-base font-light line-clamp-2">
+              {{ doc.description }}
+            </p>
             <div class="mt-4">
               <span
                 class="text-sm uppercase font-normal rounded-lg bg-blue-100 px-3 py-1.5"
@@ -34,7 +36,7 @@ const pagePath = computed<string>(() => page.value?._path ?? '');
       </template>
       <!-- Slot if document is not found -->
       <template #not-found>
-        <h1 class="text-2xl">Content Page ({{ routeSlug }}) not found</h1>
+        <h1 class="text-2xl">Content ({{ routeSlug }}) not found</h1>
       </template>
       <!-- Slot if no page content -->
       <template #empty>

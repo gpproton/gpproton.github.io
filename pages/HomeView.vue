@@ -33,14 +33,14 @@
         ></div>
       </div>
 
-      <div class="md:w-1/2 sm:w-full text-left mb-2">
+      <div class="md:w-3/4 sm:w-full text-left mb-2">
         <p class="text-2xl font-light px-1">Fullstack Developer</p>
         <h2
-          class="text-7xl text-gray-600 text-nowrap text-ellipsis font-extrabold mb-2"
+          class="lg:text-7xl text-5xl lg:text-nowrap lg:text-ellipsis text-gray-600 font-extrabold mb-2"
         >
           {{ 'Godwin Peter .O' }}
         </h2>
-        <div class="text-md font-light px-1 pb-4">
+        <div class="text-md font-light px-1 lg:pr-8 pb-4">
           I'm a fullstack developer with over 8 years of experience and with an
           extended capability in devOps and System administration, I am looking
           to participate in the development of challenging projects that allow

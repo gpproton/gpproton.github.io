@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 // const search = ref('');
-
 // const results = searchContent(search);
 
 // watchEffect(() => {
