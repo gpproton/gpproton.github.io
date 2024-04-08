@@ -8,6 +8,8 @@ slug: components-testing
 author: 'Godwin peter .O'
 draft: false
 navigation: true
+tags: Tech, Blog, Vue
+publishedAt: 2024-04-08
 image:
   src: '/assets/image.jpg'
   alt: 'placeholder'

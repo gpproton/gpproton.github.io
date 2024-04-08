@@ -7,6 +7,8 @@ description:
 slug: draft-root
 draft: false
 navigation: true
+tags: Tech, Blog, Vue
+publishedAt: 2024-04-08
 ---
 
 Nested index sample

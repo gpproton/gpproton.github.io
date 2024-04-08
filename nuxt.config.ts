@@ -82,7 +82,7 @@ export default defineNuxtConfig({
   },
   content: {
     navigation: {
-      fields: ['author', 'publishedAt'],
+      fields: ['author', 'publishedAt', 'tags'],
     },
     // TODO: Review if necessary
     sources: {

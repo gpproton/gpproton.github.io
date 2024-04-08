@@ -21,6 +21,15 @@ if (page.value !== null) {
     twitterCard: 'summary_large_image',
   });
 }
+
+const processTags = (value?: string): string[] => {
+  if (value === undefined) return [];
+  const items = value.split(',');
+
+  return items.length > 7 ? items.slice(0, items.length - 1) : items;
+};
+
+console.log(page.value);
 </script>
 
 <template>
@@ -30,15 +39,24 @@ if (page.value !== null) {
         <div class="space-y-8">
           <div class="text-center p-8 border-b">
             <h1 class="text-5xl font-bold mb-4">{{ doc.title }}</h1>
-            <p class="text-base font-light line-clamp-2">
+            <p class="text-base font-light line-clamp-2 lg:px-32">
               {{ doc.description }}
             </p>
-            <div class="mt-4">
-              <span
-                class="text-sm uppercase font-normal rounded-lg bg-blue-100 px-3 py-1.5"
-              >
-                {{ formatDate(doc.createdAt) }}
-              </span>
+            <div class="mt-4 space-y-2">
+              <div class="px-1 space-x-2">
+                <span
+                  v-for="tag in processTags(doc.tags)"
+                  :key="tag"
+                  class="text-sm text-blue-500 font-normal rounded-lg bg-blue-100 px-3 py-1.5"
+                >
+                  {{ tag }}
+                </span>
+              </div>
+              <div class="">
+                <span class="text-sm uppercase font-normal">
+                  {{ formatDate(doc.publishedAt) }}
+                </span>
+              </div>
             </div>
             <!-- <span>Updated: {{ formatDate(doc.updatedAt) }}</span> -->
           </div>

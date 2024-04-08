@@ -44,7 +44,7 @@ useSeoMeta({
       v-if="articles !== null && articles.length > 0"
       class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 sm:mt-2 sm:pt-4 lg:mx-0 lg:max-w-none lg:grid-cols-3"
     >
-      <nuxt-link v-for="post in articles" :key="post.id" :to="root + post.slug">
+      <a v-for="post in articles" :key="post.id" :href="root + post.slug">
         <article
           class="flex max-w-sm rounded-xl flex-col items-start justify-between overflow-hidden hover:bg-indigo-10 hover:scale-105 hover:shadow-2xl transition shadow transform duration-300"
         >
@@ -67,8 +67,8 @@ useSeoMeta({
             </p>
           </section>
           <footer class="flex items-center gap-x-2 text-xs mt-2 py-2 px-3">
-            <time :datetime="post.createdAt" class="text-gray-500">{{
-              formatDate(post.createdAt)
+            <time :datetime="post.publishedAt" class="text-gray-500">{{
+              formatDate(post.publishedAt)
             }}</time>
             <span
               :to="'#'"
@@ -77,7 +77,7 @@ useSeoMeta({
             >
           </footer>
         </article>
-      </nuxt-link>
+      </a>
     </div>
     <div v-else class="text-2xl text-center">{{ 'Not Found' }}</div>
   </div>

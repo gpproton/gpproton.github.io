@@ -8,6 +8,8 @@ slug: welcome-content
 author: 'Godwin peter .O'
 draft: false
 navigation: true
+tags: Tech, Blog, Vue
+publishedAt: 2024-04-08
 ---
 
 Summary of welcome content.
