@@ -28,7 +28,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="mt-8">
+  <div class="mt-20">
     <div class="text-center">
       <div class="lg:text-5xl text-3xl text-blue-500 font-bold mb-3">
         {{ pageHeading }}
@@ -42,11 +42,11 @@ useSeoMeta({
     </div>
     <div
       v-if="articles !== null && articles.length > 0"
-      class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 sm:mt-2 sm:pt-4 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+      class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 border-t border-gray-200 sm:mt-2 sm:pt-4 lg:mx-0 lg:max-w-none lg:grid-cols-3"
     >
-      <a v-for="post in articles" :key="post.id" :href="root + post.slug">
+      <a v-for="post in articles" :key="post.id" :href="root + post.slug" class="w-full flex justify-center">
         <article
-          class="flex max-w-sm rounded-xl flex-col items-start justify-between overflow-hidden hover:bg-indigo-10 hover:scale-105 hover:shadow-2xl transition shadow transform duration-300"
+          class="flex max-w-sm rounded-xl flex-col items-start sm:items-center justify-between overflow-hidden hover:bg-indigo-10 hover:scale-105 hover:shadow-2xl transition shadow transform duration-300"
         >
           <header style="height: 148px" class="w-full">
             <Image

@@ -13,10 +13,9 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-    <div class="relative isolate px-4 pt-14 lg:px-8">
+<div class="container">
+  <div  id="about" class="relative isolate px-4 lg:px-8 mb-5 border-b flex items-center justify-center"  style="height: calc(100dvh - 6rem) !important">
       <div
-        id="about"
         class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
         aria-hidden="true"
       >
@@ -45,12 +44,13 @@ useSeoMeta({
         ></div>
       </div>
 
-      <div class="md:w-3/4 sm:w-full text-left mb-2">
-        <p class="text-2xl font-light px-1">Fullstack Developer</p>
+      <div class="">
+        <div class="md:w-3/4 lg:w-1/2 sm:w-full text-left mb-2">
+        <p class="text-lg lg:text-2xl font-light">Fullstack Developer</p>
         <h2
-          class="lg:text-7xl md:text-5xl text-4xl lg:text-nowrap lg:text-ellipsis text-gray-600 font-extrabold mb-2"
+          class="lg:text-7xl md:text-5xl text-4xl lg:text-nowrap lg:text-ellipsis text-gray-600 font-extrabold mt-2 mb-3"
         >
-          {{ 'Godwin Peter .O' }}
+          {{ "Hi, i'm Peter" }}
         </h2>
         <div class="text-md font-light px-1 lg:pr-8 pb-4">
           I'm a fullstack developer with over 8 years of experience and with an
@@ -59,7 +59,63 @@ useSeoMeta({
           me to grow professionally.
         </div>
       </div>
-      <Button class="p-2 hover:bg-blue-600" label="More.." />
+      <div class="space-x-4 flex sm:justify-center md:justify-start">
+        <Button severity="gray-600" class="p-2 text-gray-500 hover:bg-gray-400" outlined label="Send Email" />
+        <Button class="p-2 hover:bg-blue-600" label="Download CV" />
+      </div>
+      </div>
     </div>
-  </div>
+
+    <section id="projects" class="p-6 sm:p-2">
+    <div class="container--inverse">
+      <div class="text-gray-500">
+        <h2 class="text-3xl font-bold">My Projects</h2>
+        <p class="text-xl">Checkout a few of my works!</p>
+      </div>
+
+      <!-- Placeholder project-->
+      <div class="flex py-8 items-center justify-center">
+        <div class="relative flex w-full max-w-none flex-row rounded-xl bg-clip-border text-gray-700 shadow-md">
+        <div class="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
+          <img src="/images/placeholder.webp" alt="placeholder" style="transform: translateY(0px);">
+        </div>
+
+        <div class="p-3 text-gray-500">
+          <h4 class="text-3xl font-semibold">Placeholder One</h4>
+          <p class="py-2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore
+            sed consequuntur error repudiandae numquam deserunt quisquam
+            repellat libero asperiores earum nam nobis
+          </p>
+          <div class="py-2">
+            <p>Name: demo@demo.dev</p>
+            <p>Password: demo</p>
+          </div>
+
+
+          <div class="flex flex-row space-x-2 py-2">
+            <span v-for="tech in [
+              { name: 'Vue', icon: 'pi pi-star'},
+              { name: 'Nuxt', icon: 'pi pi-star'},
+              { name: 'Typescript', icon: 'pi pi-star'},
+              { name: 'Docker', icon: 'pi pi-star'},
+            ]" to="#" class="relative z-10 rounded-md bg-blue-100 py-1.5 px-3 font-medium text-gray-400 hover:bg-gray-300">
+            <i :class="tech.icon"></i>
+            {{ tech.name }}</span>
+          </div>
+          <div class="flex flex-row py-4 space-x-3">
+            <Button icon="pi pi-star" severity="gray-600" class="p-2 bg-gray-200 hover:bg-gray-400" label="Demo" />
+            <Button icon="pi pi-star" severity="gray-600" class="p-2 bg-gray-200 hover:bg-gray-400" label="Source" />
+          </div>
+        </div>
+
+       
+      </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</div>  
 </template>
