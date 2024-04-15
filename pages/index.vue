@@ -13,7 +13,7 @@ useSeoMeta({
 </script>
 
 <template>
-<div class="container">
+<div class="p-2">
   <div  id="about" class="relative isolate px-4 lg:px-8 mb-5 border-b flex items-center justify-center"  style="height: calc(100dvh - 6rem) !important">
       <div
         class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -66,7 +66,7 @@ useSeoMeta({
       </div>
     </div>
 
-    <section id="projects" class="p-6 sm:p-2">
+    <section id="projects" class="lg:p-6 p-1">
     <div class="container--inverse">
       <div class="text-gray-500">
         <h2 class="text-5xl font-bold">Projects</h2>
@@ -74,8 +74,9 @@ useSeoMeta({
       </div>
 
       <!-- Placeholder project-->
-      <div class="flex py-8 items-center justify-center">
-        <div class="relative flex w-full max-w-none flex-row rounded-xl bg-clip-border text-gray-700 shadow-md">
+      <div class="flex flex-column py-8 items-center justify-center">
+        <!-- Project card -->
+        <div class="lg:max-w-[calc(100dvw-28rem)] relative flex w-full max-w-full flex-col md:flex-row rounded-xl bg-clip-border text-gray-700 shadow-md">
         <div class="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
           <img src="/images/placeholder.webp" alt="placeholder" style="transform: translateY(0px);">
         </div>
@@ -92,13 +93,13 @@ useSeoMeta({
             <p>Password: demo</p>
           </div>
 
-          <div class="flex flex-row space-x-2 py-2">
+          <div class="flex flex-row space-x-2 py-2 overflow-hidden">
             <span v-for="tech in [
               { name: 'Vue', icon: 'pi pi-star'},
               { name: 'Nuxt', icon: 'pi pi-star'},
               { name: 'Typescript', icon: 'pi pi-star'},
               { name: 'Docker', icon: 'pi pi-star'},
-            ]" to="#" class="relative z-10 rounded-md border-2 border-gray-200 py-1.5 px-3 font-medium text-gray-400 hover:bg-gray-300">
+            ]" to="#" class="flex flex-rowrelative rounded-md border-2 border-gray-200 py-1.5 px-3 sm:space-x-1 sm:text-sm font-medium text-gray-400 hover:bg-gray-300">
             <i :class="tech.icon"></i>
             {{ tech.name }}</span>
           </div>

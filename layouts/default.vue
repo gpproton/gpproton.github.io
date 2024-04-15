@@ -5,7 +5,7 @@ import AppTopbar from './components/AppTopbar.vue';
 <template>
   <div class="bg-transparent">
     <app-topbar></app-topbar>
-    <div class="lg:px-8 px-4">
+    <div class="lg:px-8 px-1">
       <slot>
         <router-view></router-view>
       </slot>
