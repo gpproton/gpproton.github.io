@@ -1,1 +1,0 @@
-import{_ as t}from"./DA-H9Rsj.js";import{f as a,W as r,o as n,c,b as e,a as _,s as p}from"./CxRqUk65.js";import"./Deh96Sqn.js";const i={class:"bg-transparent"},l={class:"lg:px-8 px-4"},h=a({__name:"default",setup(m){return(o,d)=>{const s=r("router-view");return n(),c("div",i,[e(t),_("div",l,[p(o.$slots,"default",{},()=>[e(s)])])])}}});export{h as default};
