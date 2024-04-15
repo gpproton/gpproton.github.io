@@ -60,7 +60,7 @@ useSeoMeta({
         </div>
       </div>
       <div class="space-x-4 flex sm:justify-center md:justify-start">
-        <Button severity="gray-600" class="p-2 text-gray-500 hover:bg-gray-400" outlined label="Send Email" />
+        <Button severity="gray-600" class="p-2 text-gray-500 hover:bg-gray-400" outlined label="Contact Me" />
         <Button class="p-2 hover:bg-blue-600" label="Download CV" />
       </div>
       </div>
@@ -69,7 +69,7 @@ useSeoMeta({
     <section id="projects" class="p-6 sm:p-2">
     <div class="container--inverse">
       <div class="text-gray-500">
-        <h2 class="text-3xl font-bold">My Projects</h2>
+        <h2 class="text-5xl font-bold">Projects</h2>
         <p class="text-xl">Checkout a few of my works!</p>
       </div>
 
@@ -92,14 +92,13 @@ useSeoMeta({
             <p>Password: demo</p>
           </div>
 
-
           <div class="flex flex-row space-x-2 py-2">
             <span v-for="tech in [
               { name: 'Vue', icon: 'pi pi-star'},
               { name: 'Nuxt', icon: 'pi pi-star'},
               { name: 'Typescript', icon: 'pi pi-star'},
               { name: 'Docker', icon: 'pi pi-star'},
-            ]" to="#" class="relative z-10 rounded-md bg-blue-100 py-1.5 px-3 font-medium text-gray-400 hover:bg-gray-300">
+            ]" to="#" class="relative z-10 rounded-md border-2 border-gray-200 py-1.5 px-3 font-medium text-gray-400 hover:bg-gray-300">
             <i :class="tech.icon"></i>
             {{ tech.name }}</span>
           </div>

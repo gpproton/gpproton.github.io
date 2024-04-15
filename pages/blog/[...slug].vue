@@ -31,7 +31,7 @@ const processTags = (value?: string): string[] => {
 </script>
 
 <template>
-  <div class="p-1">
+  <div class="mt-20 p-1">
     <div v-if="page" class="space-y-1">
       <div class="lg:p-8 p-1 border-b text-center">
         <h1

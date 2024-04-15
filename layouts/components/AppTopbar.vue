@@ -4,10 +4,10 @@ import { Dialog, DialogPanel } from '@headlessui/vue';
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
 
 const navigation = [
-  { name: 'shared.about', href: '/' },
-  { name: 'shared.resume', href: '#resume' },
-  { name: 'shared.skills', href: '#skills' },
-  { name: 'shared.projects', href: '#projects' },
+  { name: 'shared.about', href: '/#about' },
+  { name: 'shared.skills', href: '/#skills' },
+  { name: 'shared.projects', href: '/#projects' },
+  { name: 'shared.resume', href: '/#resume' },
   { name: 'shared.blog', href: '/blog' },
 ];
 
