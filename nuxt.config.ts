@@ -1,14 +1,17 @@
 import pkg from './package.json';
 import path from 'path';
+import { MyPreset } from './prime-preset';
 
 // TODO: use as refrence
 // https://alejandrosuarez.eu/blog/how-to-deploy-nuxt3-app-in-github-pages/
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   components: {
     global: true,
     dirs: ['~/components'],
   },
+
   runtimeConfig: {
     public: {
       APP_VERSION: pkg.version,
@@ -16,6 +19,7 @@ export default defineNuxtConfig({
       APP_MODE: process.env?.NODE_ENV,
     },
   },
+
   app: {
     head: {
       charset: 'utf-8',
@@ -23,6 +27,7 @@ export default defineNuxtConfig({
       link: [],
     },
   },
+
   modules: [
     '@vite-pwa/nuxt',
     '@vueuse/nuxt',
@@ -37,17 +42,16 @@ export default defineNuxtConfig({
       },
     ],
     [
-      'nuxt-primevue',
+      '@primevue/nuxt-module',
       {
-        unstyled: true,
-        // importPT: { from: path.resolve(__dirname, './presets/lara/') },
-        importPT: { as: 'Tailwind', from: 'primevue/passthrough/tailwind' },
-        components: {
-          include: '*',
-          exclude: ['Editor', 'Chart'],
-        },
+        usePrimeVue: true,
         options: {
-          ripple: true,
+          theme: {
+            preset: MyPreset,
+            options: {
+              darkModeSelector: '.test', // 'system',
+            },
+          }
         },
       },
     ],
@@ -84,15 +88,17 @@ export default defineNuxtConfig({
       },
     ],
   ],
+
   css: [
-    'primevue/resources/themes/aura-light-blue/theme.css',
     'primeicons/primeicons.css',
   ],
+
   router: {
     options: {
       scrollBehaviorType: 'smooth',
     },
   },
+
   content: {
     navigation: {
       fields: ['author', 'publishedAt', 'tags'],
@@ -114,5 +120,7 @@ export default defineNuxtConfig({
     },
     minify: true,
   },
+
   ssr: true,
+  compatibilityDate: '2024-09-16',
 });
