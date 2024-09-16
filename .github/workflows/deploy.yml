@@ -14,18 +14,15 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: pnpm/action-setup@v2
+
+      - name: setup bun
+        uses: oven-sh/setup-bun@v2
         with:
-          version: 8.15.4
-      - name: Generate static Nuxt 3 files
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'pnpm'
+          bun-version: "latest"
 
       - run: |
-          pnpm install
-          pnpm generate
+          bun install
+          bun generate
       - name: Init new repo in $BUILD_FOLDER and commit generated files
         run: |
           grep -rnwl "<link rel=\"prefetch\"" $BUILD_FOLDER | xargs sed -i 's$<link rel="prefetch" href="[^"]*\.\(jpg\|png\|webm\|jpeg\|ttg\|svg\|gif\)">$$g'
