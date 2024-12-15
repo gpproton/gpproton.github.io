@@ -1,6 +1,6 @@
 <template>
-  <NuxtPwaAssets />
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+	<NuxtPwaAssets />
+	<NuxtLayout>
+		<NuxtPage />
+	</NuxtLayout>
 </template>
