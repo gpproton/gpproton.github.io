@@ -1,0 +1,1 @@
+import{f as o}from"./CxYJgpPD.js";import{D as a,e as l,o as c,c as f,L as u}from"./CEmFHQez.js";const i=(r,e,t,...n)=>r[e]?a({...r,[e]:()=>o(r[e](),t==null?void 0:t.unwrap)},e,t,...n):a(r,e,t,...n),_=l({__name:"ContentAlert",props:{type:{}},setup(r){return(e,t)=>(c(),f("div",{class:u([e.type])},[i(e.$slots,"default",{unwrap:"p"})],2))}});export{_ as default};

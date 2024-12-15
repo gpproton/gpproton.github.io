@@ -1,1 +1,0 @@
-import{_ as o,o as r,c as t,D as s}from"./DgZWQ7re.js";const n={},c={class:"p-2 border rounded"};function a(e,d){return r(),t("div",c,[s(e.$slots,"default")])}const l=o(n,[["render",a]]);export{l as default};
