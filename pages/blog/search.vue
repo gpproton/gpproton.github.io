@@ -7,19 +7,19 @@ const pageTitle = ref('Search');
 const pageDescription = ref('List of filtered articles');
 
 useSeoMeta({
-  title: pageTitle.value + ' :: Godwin Peter .O',
-  description: pageDescription.value,
-  ogTitle: pageHeading.value,
-  ogDescription: pageDescription.value,
-  ogImage: 'https://godwin.dev//images/placeholder.webp',
-  twitterCard: 'summary_large_image',
+	title: pageTitle.value + ' :: Godwin Peter .O',
+	description: pageDescription.value,
+	ogTitle: pageHeading.value,
+	ogDescription: pageDescription.value,
+	ogImage: 'https://godwin.dev//images/placeholder.webp',
+	twitterCard: 'summary_large_image',
 });
 </script>
 
 <template>
-  <div>
-    <!-- <InputText v-model="search" type="text" />
+	<div>
+		<!-- <InputText v-model="search" type="text" />
 
     <pre>{{ results }} </pre> -->
-  </div>
+	</div>
 </template>
