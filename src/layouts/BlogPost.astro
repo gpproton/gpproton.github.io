@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import Footer from "../components/Footer.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import Header from "../components/Header.astro";
+import CoreLayout from "./CoreLayout.astro";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, description, publishAt, updatedAt, heroImage } = Astro.props;
+---
+
+<CoreLayout {title} {description}>
+  <Header />
+  <main>
+    <article>
+      <div class="hero-image">
+        {
+          heroImage && (
+            <Image width={800} height={300} src={heroImage} alt="" />
+          )
+        }
+      </div>
+      <div class="prose">
+        <div class="title">
+          <div class="date">
+            <FormattedDate date={publishAt} />
+            {
+              updatedAt && (
+                <div class="last-updated-on">
+                  Last updated on <FormattedDate date={updatedAt} />
+                </div>
+              )
+            }
+          </div>
+          <h1>{title}</h1>
+          <hr />
+        </div>
+        <slot />
+      </div>
+    </article>
+  </main>
+  <Footer />
+</CoreLayout>

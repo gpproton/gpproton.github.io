@@ -1,0 +1,13 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import CoreLayout from "./CoreLayout.astro";
+
+const { title, description } = Astro.props;
+---
+
+<CoreLayout {title} {description}>
+	<Header />
+  <slot />
+  <Footer />
+</CoreLayout>

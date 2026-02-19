@@ -1,0 +1,28 @@
+{
+  "name": "personal-site",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "4.3.13",
+    "@astrojs/partytown": "^2.1.4",
+    "@astrojs/rss": "4.0.15",
+    "@astrojs/sitemap": "3.7.0",
+    "@astrojs/svelte": "7.2.5",
+    "@tailwindcss/vite": "^4.2.0",
+    "astro": "5.17.1",
+    "daisyui": "^5.5.18",
+    "sharp": "0.34.3",
+    "svelte": "5.53.0",
+    "tailwindcss": "^4.2.0",
+    "typescript": "5.9.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "0.5.19"
+  }
+}
